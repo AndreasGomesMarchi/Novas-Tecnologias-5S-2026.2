@@ -1,0 +1,1 @@
+# Novas-Tecnologias-5S-2026.2
