@@ -1,0 +1,14 @@
+services:
+  jupyter:
+    image: jupyter/tensorflow-notebook:latest
+    container_name: jupyter_ai_env
+    platform: linux/arm64
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/work
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_TOKEN=bcc
+    command: start-notebook.sh --NotebookApp.notebook_dir='/home/jovyan/work'
+    restart: unless-stopped
